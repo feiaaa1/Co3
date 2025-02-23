@@ -23,9 +23,6 @@ importers:
       vue-router:
         specifier: ^4.5.0
         version: 4.5.0(vue@3.5.13)
-      vue3-spline:
-        specifier: ^1.0.0
-        version: 1.0.0(vue@3.5.13)
     devDependencies:
       '@eslint/js':
         specifier: ^9.18.0
@@ -635,9 +632,6 @@ packages:
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==}
     engines: {node: '>=18'}
 
-  '@splinetool/runtime@0.9.526':
-    resolution: {integrity: sha512-qznHbXA5aKwDbCgESAothCNm1IeEZcmNWG145p5aXj4w5uoqR1TZ9qkTHTKLTsUbHeitCwdhzmRqan1kxboLgQ==}
-
   '@splinetool/runtime@1.9.69':
     resolution: {integrity: sha512-ZetIw+4e/Q94OW6sdfasuM8RBKDA7Ap21aNsf2ZLH89Mk8Iut6G34SNM7YgdkFLW9OSiLGHKD8KYZbrMjE3DLA==}
 
@@ -1132,9 +1126,6 @@ packages:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
 
-  lodash-es@4.17.21:
-    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
-
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
 
@@ -1495,12 +1486,6 @@ packages:
     resolution: {integrity: sha512-HDuk+PuH5monfNuY+ct49mNmkCRK4xJAV9Ts4z9UFc4rzdDnxQLyCMGGc8pKhZhHTVzfanpNwB/lwqevcBwI4w==}
     peerDependencies:
       vue: ^3.2.0
-
-  vue3-spline@1.0.0:
-    resolution: {integrity: sha512-p3HQjUXTIa+nDwB7zoSRykhf4hepP/IQLq69G282XjZTg5eyJXbOLVxefcMHKAfHoFMFFcxMM90Rbzq/6nNq+g==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      vue: ^3.2
 
   vue@3.5.13:
     resolution: {integrity: sha512-wmeiSMxkZCSc+PM2w2VRsOYAZC8GdipNFRTsLSfodVqI9mbejKeXEGr8SckuLnrQPGe3oJN5c3K0vpoU9q/wCQ==}
@@ -2012,11 +1997,6 @@ snapshots:
   '@sec-ant/readable-stream@0.4.1': {}
 
   '@sindresorhus/merge-streams@4.0.0': {}
-
-  '@splinetool/runtime@0.9.526':
-    dependencies:
-      on-change: 4.0.2
-      semver-compare: 1.0.0
 
   '@splinetool/runtime@1.9.69':
     dependencies:
@@ -2561,8 +2541,6 @@ snapshots:
     dependencies:
       p-locate: 5.0.0
 
-  lodash-es@4.17.21: {}
-
   lodash.merge@4.6.2: {}
 
   lodash@4.17.21: {}
@@ -2888,12 +2866,6 @@ snapshots:
   vue-router@4.5.0(vue@3.5.13):
     dependencies:
       '@vue/devtools-api': 6.6.4
-      vue: 3.5.13
-
-  vue3-spline@1.0.0(vue@3.5.13):
-    dependencies:
-      '@splinetool/runtime': 0.9.526
-      lodash-es: 4.17.21
       vue: 3.5.13
 
   vue@3.5.13:
