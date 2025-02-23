@@ -20,265 +20,29 @@
         transition: all 1s;
       }
       .loader-bg {
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        background: #141416;
-        font-family: 'Open Sans';
-        font-weight: 100;
-        color: #f2f2f2;
-        font-size: 100%;
-        margin: 0em;
-        padding: 0em;
+        background: #000000;
         width: 100%;
         height: 100vh;
         position: fixed;
         inset: 0;
         z-index: 999;
         transition: all 1s;
-      }
-      .loader {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 999;
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -mos-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        text-align: center;
-        /* disable selection and cursor changes */
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        cursor: default;
+        overflow: hidden;
       }
 
-      /* Text align it the center of screen and connect the looped animation for 2.5 seconds */
-      .loader .text {
-        position: absolute;
-        top: 1.8em;
-        left: 0.4em;
-        z-index: 5;
-        font-size: 2em;
-        text-transform: uppercase;
-        -webkit-animation: text 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-        -moz-animation: text 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-        -ms-animation: text 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-        -o-animation: text 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-        animation: text 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-      }
-
-      /* Create a container for animation*/
-      .spinner {
-        position: relative;
-        width: 5em;
-        height: 5em;
-        color: #fff;
-      }
-
-      .spinner:before,
-      .spinner:after {
-        content: '';
-        position: relative;
-        display: block;
-      }
-
-      /* Create cube and set animation*/
-      .spinner:before {
-        -webkit-animation: spinner 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-        -moz-animation: spinner 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-        -ms-animation: spinner 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-        -o-animation: spinner 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-        animation: spinner 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-        width: 10em;
-        height: 10em;
-        background-color: #cc3eff;
-      }
-
-      /* Create shadow and set animation*/
-      .spinner:after {
-        -webkit-animation: shadow 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-        -moz-animation: shadow 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-        -ms-animation: shadow 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-        -o-animation: shadow 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-        animation: shadow 2.5s cubic-bezier(0.75, 0, 0.5, 1) infinite normal;
-        position: relative;
-        bottom: -1.75em;
-        height: 0.25em;
-        border-radius: 50%;
-        background-color: #322b27;
-      }
-
-      /* Animation keys */
-      /* from cube to circle */
-      @-webkit-keyframes spinner {
-        50% {
-          -webkit-border-radius: 50%;
-          -webkit-transform: scale(0.5) rotate(360deg);
-          background-color: #41335c;
-        }
-        100% {
-          -webkit-transform: scale(1) rotate(720deg);
-          background-color: #cc3eff;
-        }
-      }
-
-      @-moz-keyframes spinner {
-        50% {
-          -moz-border-radius: 50%;
-          -moz-transform: scale(0.5) rotate(360deg);
-          background-color: #41335c;
-        }
-        100% {
-          -moz-transform: scale(1) rotate(720deg);
-          background-color: #cc3eff;
-        }
-      }
-
-      @-mos-keyframes spinner {
-        50% {
-          -mos-border-radius: 50%;
-          -mos-transform: scale(0.5) rotate(360deg);
-          background-color: #41335c;
-        }
-        100% {
-          -mos-transform: scale(1) rotate(720deg);
-          background-color: #cc3eff;
-        }
-      }
-
-      @-o-keyframes spinner {
-        50% {
-          -o-border-radius: 50%;
-          -o-transform: scale(0.5) rotate(360deg);
-          background-color: #41335c;
-        }
-        100% {
-          -o-transform: scale(1) rotate(720deg);
-          background-color: #cc3eff;
-        }
-      }
-
-      @keyframes spinner {
-        50% {
-          border-radius: 50%;
-          transform: scale(0.5) rotate(360deg);
-          background-color: #41335c;
-        }
-        100% {
-          transform: scale(1) rotate(720deg);
-          background-color: #cc3eff;
-        }
-      }
-
-      /* animation shadow */
-      @-webkit-keyframes shadow {
-        50% {
-          -webkit-transform: scale(0.5);
-          background-color: #322b27;
-        }
-      }
-
-      @-moz-keyframes shadow {
-        50% {
-          -moz-transform: scale(0.5);
-          background-color: #322b27;
-        }
-      }
-
-      @-mos-keyframes shadow {
-        50% {
-          -mos-transform: scale(0.5);
-          background-color: #322b27;
-        }
-      }
-
-      @-o-keyframes shadow {
-        50% {
-          -o-transform: scale(0.5);
-          background-color: #322b27;
-        }
-      }
-
-      @keyframes shadow {
-        50% {
-          transform: scale(0.5);
-          background-color: #322b27;
-        }
-      }
-
-      /* animation text */
-      @-webkit-keyframes text {
-        0% {
-          -webkit-transform: scale(1, 1);
-        }
-        50% {
-          -webkit-transform: scale(0.5, 0.5);
-        }
-        100% {
-          -webkit-transform: scale(1, 1);
-        }
-      }
-
-      @-moz-keyframes text {
-        0% {
-          -moz-transform: scale(1, 1);
-        }
-        50% {
-          -moz-transform: scale(0.5, 0.5);
-        }
-        100% {
-          -moz-transform: scale(1, 1);
-        }
-      }
-
-      @-mos-keyframes text {
-        0% {
-          -mos-transform: scale(1, 1);
-        }
-        50% {
-          -mos-transform: scale(0.5, 0.5);
-        }
-        100% {
-          -mos-transform: scale(1, 1);
-        }
-      }
-
-      @-o-keyframes text {
-        0% {
-          -o-transform: scale(1, 1);
-        }
-        50% {
-          -o-transform: scale(0.5, 0.5);
-        }
-        100% {
-          -o-transform: scale(1, 1);
-        }
-      }
-
-      @keyframes text {
-        0% {
-          transform: scale(1, 1);
-        }
-        50% {
-          transform: scale(0.5, 0.5);
-        }
-        100% {
-          transform: scale(1, 1);
-        }
+      .loader-bg video {
+        width: 100%;
+        height: 100%;
       }
     </style>
   </head>
   <body>
     <div class="loader-bg-2">
       <div class="loader-bg">
-        <div class="loader">
-          <span class="text">Loading</span>
-          <span class="spinner"></span>
-        </div>
+       <video id="gif-video" autoplay muted playsinline>
+  <source src="./src/assets/loading.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
       </div>
     </div>
     <div id="app"></div>
@@ -288,8 +52,9 @@
       const loadingBg2 = document.querySelector('.loader-bg-2')
       const app = document.querySelector('#app')
       const html = document.querySelector('html')
+      const video = document.getElementById('gif-video');
+      video.loop = false; // 禁用循环播放
       html.style.overflow = 'hidden'
-      window.addEventListener('load', () => {
         setTimeout(() => {
           html.style.overflow = 'auto'
           loadingBg2.style.borderRadius = '2rem'
@@ -298,8 +63,7 @@
           setTimeout(() => {
             loadingBg2.style.transform = 'translateX(100%)'
           }, 200)
-        }, 2000)
-      })
+        }, 5600)
     </script>
   </body>
 </html>

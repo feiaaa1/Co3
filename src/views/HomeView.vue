@@ -3,7 +3,7 @@
     <!-- 首页 -->
     <div class="home">
       <iframe
-        src="https://my.spline.design/untitled-42b0776e90928c9cfdcf2e1bebcbfff5/"
+        src="https://my.spline.design/prismcoin-6075b2e0622e6809a57e6541f7f2e81a/"
         frameborder="0"
         width="100%"
         height="100%"
@@ -222,7 +222,6 @@ function zoomImg(index) {
     iframe {
       width: 100%;
       height: 100%;
-      pointer-events: none;
     }
   }
   .about {
