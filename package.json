@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@splinetool/runtime": "^1.9.69",
+    "gsap": "^3.12.7",
     "pinia": "^2.3.1",
     "sass": "^1.85.0",
     "vue": "^3.5.13",

@@ -12,7 +12,7 @@ const resizeBody = () => {
 const scroll = () => {
   const viewportHeight = window.innerHeight
   scrollbox.style.transform = `translateY(${-scrollY}px)`
-  logo.value.style.transform = `translate(-50%, ${-scrollY * 0.7}px) rotate(${(scrollY / viewportHeight) * 360}deg)`
+  logo.value.style.transform = `translate(-50%, ${-scrollY * 0.7}px) rotate(${(scrollY / viewportHeight) * 360 > 360 ? 360 : (scrollY / viewportHeight) * 360}deg)`
 }
 onMounted(() => {
   resizeBody()
@@ -26,7 +26,7 @@ onMounted(() => {
   <div class="my-scroll-bar">
     <RouterView />
   </div>
-  <div ref="logo" class="logo">LOGO</div>
+  <img src="./assets/logo.png" ref="logo" class="logo" />
 </template>
 
 <style>
@@ -35,8 +35,9 @@ onMounted(() => {
   bottom: 1rem;
   left: 50%;
   transform: translate(-50%, 0);
-  color: white;
   transition: transform 1s cubic-bezier(0.1, 0.79, 0.11, 0.82);
+  height: 5rem;
+  opacity: 0.5;
 }
 .my-scroll-bar {
   overflow: hidden;
