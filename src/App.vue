@@ -1,7 +1,21 @@
-<script setup>
-import { RouterView } from 'vue-router'
+<template>
+  <!-- 导航栏 -->
+  <NavBar @showMenu="isShowMenuView = true" />
+  <!-- 菜单页 -->
+  <MenuView @closeMenu="isShowMenuView = false" v-if="isShowMenuView" />
+  <div class="my-scroll-bar">
+    <RouterView />
+  </div>
+  <img src="./assets/logo.png" ref="logo" class="logo" />
+</template>
 
-import { nextTick, onMounted, ref } from 'vue'
+<script setup>
+import MenuView from './components/MenuView.vue'
+import NavBar from './components/NavBar.vue'
+import { RouterView } from 'vue-router'
+import { onMounted, ref } from 'vue'
+
+const isShowMenuView = ref(false)
 
 let scrollbox
 let logo = ref(null)
@@ -21,13 +35,6 @@ onMounted(() => {
   window.addEventListener('scroll', scroll)
 })
 </script>
-
-<template>
-  <div class="my-scroll-bar">
-    <RouterView />
-  </div>
-  <img src="./assets/logo.png" ref="logo" class="logo" />
-</template>
 
 <style>
 .logo {

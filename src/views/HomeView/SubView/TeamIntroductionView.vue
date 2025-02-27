@@ -8,8 +8,8 @@
         STUDIO
       </h2>
     </div>
-    <div class="text-container" v-animate="{ delay: 1000 }">
-      <p>
+    <div class="text-container">
+      <p v-animate="{ delay: 1000 }">
         未来触觉文化科技公司专注于户外“大自然”主题的3D
         Mapping和交互技术通过光影全息与交互技术，打造自然体验与互动为核心的沉浸式娱乐服务。<br />公司致力于为企业和家庭娱乐提供创新的视觉体验，提升产品展示的传播性、高效性，用户的趣味性。我们的slogan是“改变您接触黑夜的方式”。
       </p>

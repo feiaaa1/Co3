@@ -6,6 +6,8 @@
     <AboutUsView />
     <!-- 团队介绍 -->
     <TeamIntroductionView />
+    <!-- 业务涵盖页 -->
+     <BusinessCoverage />
     <!-- 业务介绍页 * 4 -->
     <BusinessOverView />
     <!-- 作品介绍 -->
@@ -16,6 +18,7 @@
 </template>
 
 <script setup>
+import BusinessCoverage from './SubView/BusinessCoverage.vue'
 import BusinessOverView from './SubView/BusinessOverView.vue'
 import HomePageView from './SubView/HomePageView.vue'
 import AboutUsView from './SubView/AboutUsView.vue'

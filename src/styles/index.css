@@ -109,12 +109,12 @@ html::-webkit-scrollbar-button {
 
 /* 淡入动画（默认） */
 .fade-enter-active {
-  animation: fadeIn 1.2s ease-out;
+  animation: fadeIn .8s ease-out;
 }
 
 /* 上滑动画 */
 .slide-up-enter-active {
-  animation: slideInUp 1.2s ease-out;
+  animation: slideInUp .8s ease-out;
 }
 
 @keyframes fadeIn {
